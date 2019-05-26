@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pdaDetails" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4f4a11df-e13e-4d56-98ef-ee39e8d78b77">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="serialNumber" class="java.lang.Integer">
+		<fieldDescription><![CDATA[serialNumber]]></fieldDescription>
+	</field>
+	<field name="particulars" class="java.lang.String">
+		<fieldDescription><![CDATA[particulars]]></fieldDescription>
+	</field>
+	<field name="breakUp" class="java.lang.String">
+		<fieldDescription><![CDATA[breakUp]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.String">
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<field name="bothCurrency" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[bothCurrency]]></fieldDescription>
+	</field>
+	<field name="amountInr" class="java.lang.String">
+		<fieldDescription><![CDATA[amountInr]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="1" width="1" height="21" uuid="6fa17188-c379-4ae9-837d-e5006b1ffb95"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Opaque" x="1" y="1" width="36" height="21" forecolor="#000000" backcolor="#C5D9F1" uuid="33c3a830-7b2a-4c8f-bc47-cd87b3e50e02"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph lineSpacing="Single" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Opaque" x="451" y="1" width="104" height="21" forecolor="#000000" backcolor="#C5D9F1" uuid="e33ece51-143d-40c9-aa09-feea3f969042">
+					<printWhenExpression><![CDATA[$F{bothCurrency}.equals( false)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph lineSpacing="Single" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Opaque" x="290" y="1" width="160" height="21" forecolor="#000000" backcolor="#C5D9F1" uuid="692c4113-5b11-472a-af21-3873ce4dc8aa"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph lineSpacing="Single" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{breakUp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Opaque" x="38" y="1" width="251" height="21" forecolor="#000000" backcolor="#C5D9F1" uuid="74e3791b-c12d-4c14-b58f-05f6f86c37e9"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font size="8" isBold="false"/>
+					<paragraph lineSpacing="Single" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{particulars}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="37" y="1" width="1" height="21" uuid="b4364374-6c1c-4580-8f04-bcd2d228476b"/>
+			</line>
+			<line>
+				<reportElement x="289" y="1" width="1" height="21" uuid="b17c6a2b-e32f-4d1c-9b44-9352d5e1adfd"/>
+			</line>
+			<line>
+				<reportElement x="450" y="1" width="1" height="21" uuid="4c6366d7-abd7-4d6b-8ad0-c7ae61254e8e"/>
+			</line>
+			<line>
+				<reportElement x="555" y="1" width="1" height="21" uuid="bbcfdfa2-2381-4c5b-8e06-9f2313235bf3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="556" height="1" uuid="8b10cdae-c413-429f-920a-ec7a65e05b35"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement key="" positionType="Float" mode="Opaque" x="504" y="1" width="51" height="21" forecolor="#000000" backcolor="#C5D9F1" uuid="24d14e23-b600-44d6-a04a-4ecb737e7dfc">
+					<printWhenExpression><![CDATA[$F{bothCurrency}.equals( true )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph lineSpacing="Single" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amountInr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="" positionType="Float" mode="Opaque" x="451" y="1" width="52" height="21" forecolor="#000000" backcolor="#C5D9F1" uuid="7d8c5108-1a1c-4a93-aa50-97e40571f77e">
+					<printWhenExpression><![CDATA[$F{bothCurrency}.equals( true )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph lineSpacing="Single" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="" x="503" y="1" width="1" height="21" uuid="c3bd779c-565d-49da-9697-2efb82254ae3">
+					<printWhenExpression><![CDATA[$F{bothCurrency}.equals( true )]]></printWhenExpression>
+				</reportElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
